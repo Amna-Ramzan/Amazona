@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+.animation{
+    animation-name: move;
+ animation-duration: 6s;
+ animation-timing-function:ease ;
+    animation-iteration-count: infinite;
+    transition: transform;
+}
+@keyframes move{
+    to{
+        transform: rotate(360deg);
+    }
+    /* from{
+        transform: rotate(360deg);
+    } */
+}
+@layer base{
+    body{
+        /* @apply font-[Raleway]; */
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    li{
+        @apply px-4;
+        @apply cursor-pointer;
+    }
+}
